@@ -3,8 +3,8 @@ pipeline { // Declarative pipelineであることを宣言する
   stages{
       stage("build"){
           steps{
-            npm install
-            npm run build
+            sh "npm install"
+            sh "npm run build"
           }
           //ステップ終了処理
           post{
