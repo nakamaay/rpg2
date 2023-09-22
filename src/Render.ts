@@ -14,13 +14,21 @@ const SpriteRender = (url: string, x: number, y: number) => {
   img.src = url;
 };
 
+const MapRender =(chip:string,data:number[])=>{
+  for
+}
+
 class Render {
   fps: number;
   seen: Seen;
+  height:number;
+  width:number;
 
-  constructor(fps: number, seen: Seen) {
+  constructor(fps: number, seen: Seen,height:number,width:number) {
     this.fps = fps;
     this.seen = seen;
+    this.height = height;
+    this.width = width
   }
   play() {
     setInterval(() => {
@@ -32,6 +40,11 @@ class Render {
               this.seen.objects[index].x,
               this.seen.objects[index].y
             );
+            break;
+          case "Map":
+            MapRender(
+              this.seen.objects[index].chip,this.seen.objects[index].data
+            )
             break;
 
           default:

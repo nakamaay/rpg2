@@ -11,5 +11,5 @@ square.x = 200;
 square.y = 100;
 test.add(circle);
 test.add(square);
-const render = new Render(30, test);
+const render = new Render(30, test,640,480);
 render.play();
