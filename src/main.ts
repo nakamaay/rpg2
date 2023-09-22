@@ -3,7 +3,7 @@ import Seen from "./Seen";
 import Render from "./Render";
 
 const circle = new Sprite("img/circle.png");
-const square = new Sprite("img/dog.png");
+const square = new Sprite("img/square.png");
 const test = new Seen("Seen");
 circle.x = 50;
 circle.y = 60;
