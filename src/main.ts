@@ -2,15 +2,14 @@ import Sprite from "./Sprite";
 import Seen from "./Seen";
 import Render from "./Render";
 
-const canvas = document.getElementById("mycanvas") as HTMLCanvasElement;
-const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
-
-ctx.fillRect(32, 32, 100, 100);
-
-const animal = new Sprite("img/cat.png");
-const animal2 = new Sprite("img/dog.png");
+const circle = new Sprite("img/circle.png");
+const square = new Sprite("img/dog.png");
 const test = new Seen("Seen");
-test.add(animal);
-test.add(animal2);
+circle.x = 50;
+circle.y = 60;
+square.x = 200;
+square.y = 100;
+test.add(circle);
+test.add(square);
 const render = new Render(30, test);
 render.play();
